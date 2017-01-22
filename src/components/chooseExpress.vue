@@ -72,7 +72,8 @@
      </div>
   </div>
       <div class="am-list myChooseExpress ">
-       <route-link  class="chooseOutA"
+       <route-link
+           class="chooseOutA"
           v-for="(item,index) in datasource"
           :to="{name:'result', params: {name:item.title}}"
          :style="{borderBottom:index==total ?  '' : '.01rem solid #e5e5e5'}"

@@ -39,6 +39,7 @@
 </style>
 
 <template lang="html">
+  <div>
   <div class="addressee am-list form">
        <div v-for="(item,index) in datasource" style="height:.95rem; padding:.12rem 0;margin-left:.12rem; border-bottom:1px solid #e6e6e6" class="am-list-item am-input-autoclear">
          <i   v-bind:style="{background:bgcolor[index]}" class="iBall">{{item.type}}</i>
@@ -73,6 +74,7 @@
           type="button"
           class="am-button disabled ">下一步</button>
   </div>
+</div>
 </template>
 
 

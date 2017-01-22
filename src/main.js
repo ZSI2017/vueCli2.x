@@ -1,5 +1,4 @@
 
-
 import first from "./components/one.vue";
 //import second from "./components/second.vue";
 import third from "./components/third.vue";
@@ -25,9 +24,9 @@ import result from "./components/result.vue"
 
 import lastSuccess from "./components/success.vue";
 
-import choose from "./components/chooseExpress.vue";
+//import choose from "./components/chooseExpress.vue";
 
-import orderDetail from "./components/orderDetail.vue";
+//import orderDetail from "./components/orderDetail.vue";
 
 //import  jsapi from "./components/jsapi.vue"
 
@@ -50,43 +49,42 @@ import orderDetail from "./components/orderDetail.vue";
 
 
 
-let router = new VueRouter();
+//let router = new VueRouter();
 
 let App = Vue.extend({
       store:store
 });
 
-const router=
-   new VueRouter({
+const router =  new VueRouter({
       routes:[{
-                     path:"/"
+                     path:"/",
                      name:'first',
                      component:index
                 },
                 {
-                    path:"/first"
+                    path:"/first",
                      name:'fujingziyuan',
                      component:first
                 },
                 {
-                      path:"/second/:name"
+                      path:"/second/:name",
                       name:"second",
                       component:second
                 },
                  {
-                     path:"/third"
+                     path:"/third",
                      name:"third",
                      component:third
                 },
                  {
-                    path:"/four"
+                    path:"/four",
                      name:'four',
                      component:four
                 },
                  {
-                        path:"/address"
-                         name:'address',
-                         component:address
+                       path:"/address",
+                       name:'address',
+                       component:address
                 },
                 {
                     path:"/getServer/:myid",
@@ -94,33 +92,24 @@ const router=
                     component:getServer
                 },
                 {
-                      path:"/jijian"
+                      path:"/jijian",
                         name:"jijian",
                         component:jijian
                 },
                 {
-                        path:"/manage"
+                        path:"/manage",
                          name:'manage',
                          component:manage
                 },
                 {
-                          path:"/successLast"
+                          path:"/successLast",
                           name:'success',
                           component:lastSuccess,
                 },
                 {
-                            path:""/result/:name""
+                            path:"/result/:name",
                 　　　　　　 name:"result",
                             component:result
-                },
-               {       path:"  "/chooseExpress""
-                       name:"choose",
-                       component:choose
-                },
-                {
-                            path:'"/orderDetail'
-                              name:"order",
-                              component:orderDetail
                 }]
 })
 

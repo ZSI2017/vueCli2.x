@@ -27,6 +27,7 @@
           <p  style="font-weight:bold;font-size:.26rem">附近快递网点</p>
      </my-header> -->
        <!-- 使用自定义 组件  -->
+    <div>
        <location>
          <input  class="myInput"
          v-bind:placeholder="address"  />
@@ -44,6 +45,7 @@
 
 
        </ul>
+     </div>
 
 </template>
 
