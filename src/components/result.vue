@@ -244,9 +244,10 @@
        },
        created(){
          var _this = this;
-         ant.setTitle({
-             title:_this.$route.params.name,
-         })
+         console.log(this);
+        //  ant.setTitle({
+        //      title:_this.$route.params.name,
+        //  })
         //  this.$http.get("/rest/list4")
         //    .then(
         //       (res) =>{
@@ -258,6 +259,7 @@
         //    )
        },
        mounted(){
+
        }
   }
 </script>

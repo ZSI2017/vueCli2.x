@@ -84,11 +84,11 @@
       <p>常用功能</p>
          <ul class="am-flexbox outli">
              <li v-for="(item,index) in datasource" class="flexboxli">
-                <route-link  :to="{path:item.path}" class="flexboxliin">
+                <router-link :to="{path:item.path}" class="flexboxliin">
                     <img class="flexboxliinimg" :src="item.imgUrl" alt="快递">
                     <p class="flexboxliinp1">{{item.p1}}</p>
                     <p class="flexboxliinp2">{{item.p2}}</p>
-                </route-link>
+                </router-link>
              </li>
          </ul>
 
@@ -97,7 +97,11 @@
 
 
 <script>
+// import Vue from "vue"
+// import VueRouter from "vue-router";
+//    Vue.use(VueRouter);
    export default{
+
         data(){
           return{
             datasource:[
