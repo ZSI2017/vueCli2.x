@@ -1,34 +1,32 @@
 import getServer from "./components/getServer.vue";
 import index from "./components/kuaidi.vue";
 
-//import second from "./components/second.vue";
-// import first from "./components/one.vue";
-// import third from "./components/third.vue";
+
+
+import third from "./components/third.vue";
+import first from "./components/one.vue";
+
+  import second from "./components/second.vue";
+//import index from "./components/index.vue";
+  import bottomlist from "./components/index.vue";
+
 //
-// import second from "./components/second.vue";
+import address from "./components/Address.vue";
+
+import four from "./components/four.vue";
+
+
+import jijian from "./components/jijian.vue";
+
+import manage from "./components/manage.vue";
+
+import result from "./components/result.vue"
 //
-// //import index from "./components/index.vue";
-//   import bottomlist from "./components/index.vue";
-//
-//
-// import address from "./components/Address.vue";
-//
-// import four from "./components/four.vue";
-//
-//
-// import jijian from "./components/jijian.vue";
-//
-// import manage from "./components/manage.vue";
-//
-// import result from "./components/result.vue"
-//
-// import lastSuccess from "./components/success.vue";
-//
-// import choose from "./components/chooseExpress.vue";
-//
-// import orderDetail from "./components/orderDetail.vue";
-//
-// import  jsapi from "./components/jsapi.vue"
+import lastSuccess from "./components/success.vue";
+
+import choose from "./components/chooseExpress.vue";
+import orderDetail from "./components/orderDetail.vue";
+
 
 
 //  在最外层的app.js 文件中注册 自定义的search 组件
@@ -58,71 +56,73 @@ Vue.use(VueRouter);
 
   // Vue.use(VueRouter);
 const router =  new VueRouter({
-        routes:[
-          {     path:"/getServer/:myid",
-                       name:"getServer",
-                       component:getServer
-           },{
-             path:"/",
-             name:'first',
-            component:index
-           }
-        ]
-      // routes:[{
-      //                path:"/",
-      //                name:'first',
-      //                component:index
-      //           },
-      //           {
-      //               path:"ss/first",
-      //                name:'fujingziyuan',
-      //                component:first
-      //           },
-      //           {
-      //                 path:"/second/:name",
-      //                 name:"second",
-      //                 component:second
-      //           },
-      //            {
-      //                path:"/third",
-      //                name:"third",
-      //                component:third
-      //           },
-      //            {
-      //               path:"/four",
-      //                name:'four',
-      //                component:four
-      //           },
-      //            {
-      //                  path:"/address",
-      //                  name:'address',
-      //                  component:address
-      //           },
-      //           {
-      //               path:"/getServer/:myid",
-      //               name:"getServer",
-      //               component:getServer
-      //           },
-      //           {
-      //                 path:"/jijian",
-      //                   name:"jijian",
-      //                   component:jijian
-      //           },
-      //           {
-      //                   path:"/manage",
-      //                    name:'manage',
-      //                    component:manage
-      //           },
-      //           {
-      //                     path:"/successLast",
-      //                     name:'success',
-      //                     component:lastSuccess,
-      //           },
-      //           {
-      //                       path:"/result/:name",
-      //           　　　　　　 name:"result",
-      //                       component:result
-      //           }]
+      routes:[{
+                     path:"/",
+                     name:'first',
+                     component:index
+                },
+                {
+                     path:"/first",
+                     name:'fujingziyuan',
+                     component:first
+                },
+                {
+                      path:"/second/:name",
+                      name:"second",
+                      component:second
+                },
+                 {
+                     path:"/third",
+                     name:"third",
+                     component:third
+                },
+                 {
+                    path:"/four",
+                     name:'four',
+                     component:four
+                },
+                 {
+                       path:"/address",
+                       name:'address',
+                       component:address
+                },
+                {
+                    path:"/getServer/:myid",
+                    name:"getServer",
+                    component:getServer
+                },
+                {
+                      path:"/jijian",
+                        name:"jijian",
+                        component:jijian
+                },
+                {
+                        path:"/manage",
+                         name:'manage',
+                         component:manage
+                },
+                {
+                          path:"/successLast",
+                          name:'success',
+                          component:lastSuccess,
+                },
+                {
+                            path:"/result/:name",
+                　　　　　　 name:"result",
+                            component:result
+                },
+                {
+                          path:"/chooseExpress",
+                          name:"choose",
+                          component:choose
+                  },
+                  {
+                      path:"/orderDetail",
+                      name:"order",
+                      component:orderDetail
+                  }
+                
+              ]
 })
 
   // console.log(router);

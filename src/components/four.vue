@@ -14,6 +14,7 @@
 <script>
     import  VuePlugin from  "../plugins/plug1.js";
     import {changeIndex} from "../vuex/actions";
+    import Vue from "vue";
     Vue.use(VuePlugin);
 export default{
     data(){
@@ -34,7 +35,7 @@ export default{
 
     },
     mounted(){
-        this.change(1);
+        // this.change(1);
 
     },
     destory(){

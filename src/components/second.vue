@@ -76,7 +76,7 @@
           console.log("created");
      },
  mounted(){
-     this.change(2);
+    //  this.change(2);
    console.log("ready");
    var _this = this;
 

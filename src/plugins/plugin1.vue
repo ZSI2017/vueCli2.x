@@ -84,8 +84,8 @@
        },
        methods:{
          green(){
-           let router = new VueRouter;
-           router.push({
+          //  let router = new VueRouter;
+           this.$router.push({
                  path:'/chooseExpress'
            })
          },

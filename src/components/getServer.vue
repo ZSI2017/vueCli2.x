@@ -27,6 +27,8 @@
         <div style="margin:.3rem .15rem 0rem">
             <button  @click="nextRouter" type="button" class="am-button blue  ">确定</button>
         </div>
+          <router-link to="/"></router-link>
+
           <router-view></router-view>
         <p style="margin-left:.15rem;">确认授权即表示同意 <i style="color:blue;font-style:normal">《用户授权协议》</i></p>
                <!-- <p>{{$route.params.myid}}</p> -->
@@ -39,7 +41,6 @@
 // import Vue from "vue";
 // import VueRouter from "vue-router";
 //  Vue.use(VueRouter);
-
   export default{
        data(){
             return{
@@ -52,13 +53,13 @@
              console.log("_______________");
              console.log(this.$route);
            if(this.$route.params.myid==0){
-             console.log("this.$route.params.myid");
+               console.log("this.$route.params.myid");
               this.$router.push({path:'/jijian'})
            }else{
                this.$router.push({path:"/third"});
            }
-               这里填写路由跳转的条码
-              alert("进入下一个路由！！！")
+
+              //alert("进入下一个路由！！！")
          }
 
        },

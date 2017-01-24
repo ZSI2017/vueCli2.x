@@ -69,7 +69,7 @@
   </div>
   <div style="margin:.3rem .15rem .6rem">
       <button
-          @click="green"
+
           disabled="disabled"
           type="button"
           class="am-button disabled ">下一步</button>

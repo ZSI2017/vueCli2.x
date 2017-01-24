@@ -11,8 +11,9 @@
      <p style="font-weight:bold;font-size:.26rem">附件快递资源</p>
    </my-header>  -->
   <div class="am-list ">
-      <route-link v-for="item in datasource"
+      <router-link
          :to="{name:'second', params: {name:item.title}}"
+         v-for="item in datasource"
        class="am-list-item" style="border-bottom:.01rem solid #5c5c5c">
         <div class="am-list-thumb">
           <!-- A11Y: alt 信息增加对图片内容或者目的描述，如「xxx头像」 -->
@@ -22,12 +23,12 @@
           <div class="am-list-title" style="font-size:.2rem,font-weight:bold">{{item.title}}</div>
           <div class="am-list-brief" style="font-size:.14rem;overflow:visible">{{item.subtitle}}</div>
           <div  class="am-list-brief" style="margin-top:.03rem;margin-bottom:2px">
-             <p v-for="i in item.little" class="am-flexbox-item" style="display:inline-block;height:.2rem;padding:.01rem;margin-right:.02rem;color:red;border:1px solid red;font-size:12px">{{i}}</p></div>
+             <p v-for="item in item.little" class="am-flexbox-item" style="display:inline-block;height:.2rem;padding:.01rem;margin-right:.02rem;color:red;border:1px solid red;font-size:12px">{{item}}</p></div>
         </div>
         <div class="am-list-arrow" aria-hidden="true">
           <span class="am-icon arrow horizontal"></span>
         </div>
-      </route-link>
+      </router-link>
 </div>
 
 </template>
@@ -85,9 +86,9 @@
           //    )
         },
         mounted(){
-           this.change(0);
+          //  this.change(0);
            console.log("one vue one vue");
-          let router = new VueRouter();
+          // let router = new VueRouter();
         // setTimeout(function(){
         //       router.push({path:'/index/third'});
         //       console.log("跳转、");

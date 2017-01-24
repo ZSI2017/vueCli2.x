@@ -60,7 +60,7 @@
           </div>
         </div>
     <div style="margin:15px 15px 60px">
-        <button v-on:click="green" type="button" class="am-button blue  ">完成</button>
+        <button @click="myClick" type="button" class="am-button blue  ">完成</button>
     </div>
 
           </section>
@@ -90,9 +90,9 @@
              }
          },
          methods:{
-           green(){
-             let router = new VueRouter;
-             router.push({path:"/four"});
+           myClick(){
+
+             this.$router.push({path:"/four"});
                alert("提交成功！");
            },
            change123(){
@@ -110,7 +110,7 @@
               ant.setTitle({
                   title:"填写寄件人地址"
               })
-              this.change(3);
+              // this.change(3);
          }
     }
 </script>

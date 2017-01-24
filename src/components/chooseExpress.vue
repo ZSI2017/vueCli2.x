@@ -7,7 +7,7 @@
        border-right:0;
       .chooseOutA{
         margin-left:.15rem;
-        // border-bottom:.01rem solid #e5e5e5;
+         border-bottom:.01rem solid #e5e5e5;
         .mylistItem{
           padding:.15rem;
           padding-left:0;
@@ -71,30 +71,36 @@
          <a class="am-notice-close" href=""></a>
      </div>
   </div>
-      <div class="am-list myChooseExpress ">
-       <route-link
-           class="chooseOutA"
-          v-for="(item,index) in datasource"
+    <div class="am-list myChooseExpress ">
+       <router-link
           :to="{name:'result', params: {name:item.title}}"
-         :style="{borderBottom:index==total ?  '' : '.01rem solid #e5e5e5'}"
+          class="chooseOutA"
+         v-for="(item,index) in datasource"
+          :style="{borderBottom:index==total ?  '' : '.01rem solid #e5e5e5'}"
        >
           <a class="am-list-item mylistItem" >
             <div class="am-list-thumb myThumb">
-              <!-- A11Y: alt 信息增加对图片内容或者目的描述，如「xxx头像」 -->
-              <img id="myImage" src="https://os.alipayobjects.com/rmsportal/OhSzVdRBnfwiuCK.png" alt="图片描述" />
+              <img id="myImage"  src="https://os.alipayobjects.com/rmsportal/OhSzVdRBnfwiuCK.png"  alt="图片描述" />
             </div>
-            <div class="am-list-content mycontent">
+           <div class="am-list-content mycontent">
               <div class="am-list-title myTitle am-flexbox">
                  <p>{{item.title}}</p>
-                 <i class="myLogo" v-for="iitem in item.hot" v-bind:style="{background:item.color}">
+                 <i class="myLogo"
+                     v-for="iitem in item.hot"      :style="{background:item.color}">
                       <b>{{iitem}}</b>
                  </i>
                 </div>
               <div class="am-list-brief" style="font-size:.12rem;text-overflow:ellipsis">{{item.subtitle}}</div>
-              <div  class="am-list-brief " style="margin-top:.03rem;margin-bottom:2px">
-                 <p class="myp"  v-for="i in item.little" class="am-flexbox-item" >{{i}}</p></div>
+              <div  class="am-list-brief "        　
+　　　　　　　　　　　style="margin-top:.03rem;margin-bottom:2px">
+                 <p
+                     v-for="item in item.little"
+                     class="am-flexbox-item myp"
+                  >{{item}}
+                </p>
+              </div>
             </div>
-            <div class="am-list-extra myExtra">
+             <div class="am-list-extra myExtra">
                  {{item.money}}
             </div>
             <div class="am-list-arrow" aria-hidden="true">
@@ -102,15 +108,15 @@
               </span>
             </div>
           </a>
-        </route-link>
-    </div>
+        </router-link>
+      </div>
 </div>
 </template>
 
 
 <script>
    import  {changeIndex} from "../vuex/actions";
-   export default{
+    export default{
         data(){
             return{
               notice:"由于双十一期间快递资源紧张，故部分快递无法正常配送",
@@ -160,9 +166,9 @@
         created(){
       // use Vue.nextTick if you need  an in-document guarantee
 
-           ant.setTitle({
-               title:"选择快递"
-           })
+          //  ant.setTitle({
+          //      title:"选择快递"
+          //    })
           //  this.$http.get("/rest/list2")
           //    .then(
           //          (res) =>{
@@ -174,9 +180,9 @@
           //    )
         },
         mounted(){
-           this.change(0);
+          //  this.change(0);
            console.log("one vue one vue");
-          let router = new VueRouter();
+
         // setTimeout(function(){
         //       router.push({path:'/index/third'});
         //       console.log("跳转、");

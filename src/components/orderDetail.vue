@@ -26,8 +26,8 @@ s   <style lang="scss" scoped>
                font-size:.14rem;
           }
         }
+      }
 
-        }
 
   // list 3 列表
       .am-list:not([am-version]).form{
@@ -58,7 +58,6 @@ s   <style lang="scss" scoped>
           }
           line-height: .34rem;
           font-size: .14rem;
-
         }
         .moreEllipsis{
             line-height: .2rem;
@@ -158,19 +157,18 @@ s   <style lang="scss" scoped>
        </div>
 
          <!-- list6 列表6 -->
-       <div class="am-list">
-             <div class="am-list-body  my-list-body4">
-               <a  v-for="(items.index) in datalist5"
+        <div class="am-list">
+            <div class="am-list-body  my-list-body4">
+               <a  v-for="(items,index) in datalist5"
                    :style="{borderBottom: index==total5-1?'':'.01rem solid #e5e5e5'}"
                 class="am-list-item  myItem">
-                 <div class="am-list-content ">{{items.content}}</div>
+                <div class="am-list-content ">{{items.content}}</div>
                  <div class="am-list-extra">{{items.extra}}</div>
                </a>
              </div>
        </div>
-     <p class="otherFont">首重7元，续重3元 <a href="#">如何计算?</a> </p>
-
-  	</div>
+       <p class="otherFont">首重7元，续重3元 <a href="#">如何计算?</a> </p>
+  </div>
 </template>
 
 
@@ -256,9 +254,9 @@ s   <style lang="scss" scoped>
 
          this.total5= this.datalist5.length;
 
-	         ant.setTitle({
-		       title:"订单详情"
-		   })
+	    //      ant.setTitle({
+		  //      title:"订单详情"
+		  //  })
 	      },
 
 

@@ -135,7 +135,6 @@
        <p class="myresultkuaidip"><i class="myresultkuaidired">*首重7元，续重3元</i> 实际费用以快递员取件时的称重为准<a>如何计算?</a>如需保价，请与快递员当面沟通</p>
        </div>
      </div>
-
   <div class="borderBottom">
      <div style="padding:.13rem 0" class="am-wingblank wb.18rem">
         <img style="height:.17rem" src="/static/images/people.png" alt="额外服务"> <i style="font-style:normal">额外服务</i>
@@ -230,8 +229,7 @@
              });
          },
          green(){
-            let router = new VueRouter();
-             router.push({path:"/orderDetail"});
+             this.$router.push({path:"/orderDetail"});
          },
           myClick(index){
              var  _this = this;
@@ -243,8 +241,8 @@
           }
        },
        created(){
-         var _this = this;
-         console.log(this);
+        //  var _this = this;
+        //  console.log(this);
         //  ant.setTitle({
         //      title:_this.$route.params.name,
         //  })
